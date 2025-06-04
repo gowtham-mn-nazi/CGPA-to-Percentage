@@ -4,100 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>CGPA to Percentage</title>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    html, body {
-      height: 100%;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: linear-gradient(to bottom right, #e0f7fa, #e8f5e9);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .wrapper {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 30px;
-      text-align: center;
-    }
-
-    .college-name {
-      font-size: 24px;
-      font-weight: 700;
-      color: #1a237e;
-    }
-
-    .container {
-      background-color: #ffffff;
-      padding: 30px 25px;
-      border-radius: 16px;
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-      width: 100%;
-      max-width: 400px;
-      text-align: center;
-    }
-
-    .container h1 {
-      font-size: 22px;
-      margin-bottom: 20px;
-      color: #2c3e50;
-    }
-
-    .container label {
-      display: block;
-      font-weight: 600;
-      margin-bottom: 8px;
-      color: #37474f;
-      text-align: left;
-    }
-
-    .container input[type="number"] {
-      width: 100%;
-      padding: 12px;
-      font-size: 16px;
-      border: 1.5px solid #ccc;
-      border-radius: 8px;
-      outline: none;
-      transition: 0.3s ease;
-    }
-
-    .container input[type="number"]:focus {
-      border-color: #00796b;
-      background-color: #f1fdfb;
-    }
-
-    .container button {
-      margin-top: 20px;
-      width: 100%;
-      padding: 12px;
-      font-size: 16px;
-      font-weight: 600;
-      border: none;
-      border-radius: 8px;
-      background-color: #00796b;
-      color: white;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-    }
-
-    .container button:hover {
-      background-color: #004d40;
-    }
-
-    .result {
-      margin-top: 20px;
-      font-size: 18px;
-      color: #00796b;
-      font-weight: bold;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
@@ -115,23 +22,6 @@
     </div>
   </div>
 
-  <script>
-    function calculatePercentage(event) {
-      event.preventDefault();
-      const cgpa = parseFloat(document.getElementById('cgpa').value);
-      const result = document.getElementById('result');
-
-      if (cgpa < 0 || cgpa > 10 || isNaN(cgpa)) {
-        result.textContent = "Please enter a valid CGPA between 0 and 10.";
-        result.style.color = '#d32f2f';
-        return;
-      }
-
-      const percentage = ((cgpa - 0.75) * 10).toFixed(2);
-      result.style.color = '#00796b';
-      result.textContent = `Your Percentage is: ${percentage}%`;
-    }
-  </script>
-
+  <script src="script.js"></script>
 </body>
 </html>
